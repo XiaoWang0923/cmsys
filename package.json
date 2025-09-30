@@ -1,0 +1,54 @@
+{
+  "name": "cmsys",
+  "version": "0.0.0",
+  "description": "Class Management System using electron for automatically managing the classroom computer.",
+  "main": "out/app/main.js",
+  "scripts": {
+    "copy:ext": "npx copyfiles -u 1 extensions/**/*.json out/extensions/",
+    "copy:app": "npx copyfiles -u 1 src/**/*.html src/**/*.css out/app/ ",
+    "complie:ext": "tsc -p tsconfig.ext.json && npm run copy:ext",
+    "complie:app": "tsc -p tsconfig.json && npm run copy:app",
+
+    "complie": "npm run complie:ext && npm run complie:app",
+    "start": "electron out/app/main.js",
+    "dev": "npm run complie && npm run start",
+    "dist": "electron-builder && npx copyfiles -u 1 out/extensions/**/* dist/",
+    "clean": ""
+  },
+  "keywords": [],
+  "author": "Bowen Wang",
+  "license": "MIT",
+  "type": "commonjs",
+  "devDependencies": {
+    "@types/node": "^24.5.2",
+    "copyfiles": "^2.4.1",
+    "electron": "^38.1.2",
+    "electron-builder": "^26.0.12",
+    "typescript": "^5.9.2"
+  },
+  "build": {
+    "appId": "com.cmsys.qyyz",
+    "productName": "CMsys",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "out/app/**/*",
+      "assets/**/*"
+    ],
+    "asar": true,
+    "win": {
+      "target": [
+        "nsis"
+      ],
+      "icon": "assets/icon.ico"
+    },
+    "mac": {
+      "target": "dmg",
+      "icon": "assets/icon.icns"
+    },
+    "linux": {
+      "target": "AppImage"
+    }
+  }
+}
