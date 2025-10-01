@@ -13,7 +13,7 @@
 - [ ] 自动关机插件
 - [ ] 教室音量检测插件
 ## License
-Copyright ©️ 2025 XiaoWang. All rights reserved.
+Copyright © 2025 XiaoWang. All rights reserved.
 
 Licensed under the [MIT](./LICENSE) license.
 
@@ -32,6 +32,6 @@ Will implement extensions:
 - [ ] Auto shutdown extension
 - [ ] Classroom volume detection extension
 ## License
-Copyright ©️ 2025 XiaoWang. All rights reserved.
+Copyright © 2025 XiaoWang. All rights reserved.
 
 Licensed under the [MIT](./LICENSE) license.

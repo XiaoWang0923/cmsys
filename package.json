@@ -15,7 +15,8 @@
     "start": "electron out/app/main.js",
     "dev": "npm run complie && npm run start",
     "dist": "electron-builder && npx copyfiles -u 1 out/extensions/**/* dist/",
-    "clean": "npm run clean:dist && npm run clean:out"
+    "clean": "npm run clean:dist && npm run clean:out",
+    "release": "npm run clean && npm run complie && npm run dist"
   },
   "keywords": [],
   "author": "Bowen Wang",
@@ -37,14 +38,25 @@
     },
     "files": [
       "out/app/**/*",
+      "!out/app/**/*.map",
       "assets/**/*"
     ],
     "asar": true,
     "win": {
-      "target": [
-        "nsis"
-      ],
+      "target": ["nsis"],
       "icon": "assets/icon.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "deleteAppDataOnUninstall": true
+    },
+    "msi": {
+      "oneClick": false,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "runAfterFinish": true,
+      "shortcutName": "CMsys"
     },
     "mac": {
       "target": "dmg",
