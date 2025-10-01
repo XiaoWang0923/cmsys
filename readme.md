@@ -13,7 +13,7 @@
 - [ ] 自动关机插件
 - [ ] 教室音量检测插件
 ## License
-Copyright (c) 2025 XiaoWang.All rights reserved.
+Copyright ©️ 2025 XiaoWang. All rights reserved.
 
 Licensed under the [MIT](./LICENSE) license.
 
@@ -21,17 +21,17 @@ Licensed under the [MIT](./LICENSE) license.
 ## Overview
 Class Management System using `Electron` for automatically managing the classroom computer.
 ## Features(developing)
-Core feature: Plugin system
+Core feature: Extension system
 
-Will implement plugins:
+Will implement extensions:
 - Auto shutdown
 - Classroom volume detection
 ## Development progress
 - [x] Basic framework setup
-- [ ] Plugin system
-- [ ] Auto shutdown plugin
-- [ ] Classroom volume detection plugin
+- [ ] Extension system
+- [ ] Auto shutdown extension
+- [ ] Classroom volume detection extension
 ## License
-Copyright (c) 2025 XiaoWang.All rights reserved.
+Copyright ©️ 2025 XiaoWang. All rights reserved.
 
 Licensed under the [MIT](./LICENSE) license.
